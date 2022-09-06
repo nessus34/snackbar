@@ -1,0 +1,72 @@
+:root {
+    --red: rgb(116, 5, 5);
+    --white: #fff;
+}
+
+#snackbar {
+    visibility: hidden;
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    background: red;
+    border-radius: 10px;
+    padding: 15px;
+    margin: 10px;
+}
+
+button {
+    background: var(--red);
+    color: var(--white);
+    border: none;
+    border-radius: 15px;
+}
+
+#snackbar.show {
+    visibility: visible;
+    -webkit-animation: fadein 0.3s, fadeout 0.5s 2.5s;
+    animation: fadein 0.5s, fadeout 0.5s 2.5s;
+}
+
+@-webkit-keyframes fadein {
+    from {
+        bottom: 0;
+        opacity: 0;
+    }
+    to {
+        bottom: 30px;
+        opacity: 1;
+    }
+}
+
+@keyframes fadein {
+    from {
+        bottom: 0;
+        opacity: 0;
+    }
+    to {
+        bottom: 30px;
+        opacity: 1;
+    }
+}
+
+@-webkit-keyframes fadeout {
+    from {
+        bottom: 30px;
+        opacity: 1;
+    }
+    to {
+        bottom: 0;
+        opacity: 0;
+    }
+}
+
+@keyframes fadeout {
+    from {
+        bottom: 30px;
+        opacity: 1;
+    }
+    to {
+        bottom: 0;
+        opacity: 0;
+    }
+}
